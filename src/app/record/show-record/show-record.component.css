@@ -1,0 +1,15 @@
+.example-card {
+	/*border-top: 75%;*/
+	/*border-radius: 25%;*/
+	margin-top: 20%;
+}
+
+.mattab-example-group{
+	height: 100%;
+}
+.mattab-example-group mat-tab{
+	height: 100%;
+}
+.mattab-example-group mat-list{
+	height: 100%;
+}
