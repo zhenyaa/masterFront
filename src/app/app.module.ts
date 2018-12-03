@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
+import{RouteRoutingModule} from  './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {RecordModule} from './record/record.module';
 
 import {
   MatAutocompleteModule,
@@ -49,6 +50,7 @@ import {
   declarations: [
     AppComponent,
     MenuComponent
+    
   ],
   imports: [
     BrowserAnimationsModule,
@@ -57,9 +59,14 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    // RecordModule,
+    RouteRoutingModule
   ],
   providers: [],
+    exports: [
+    RouteRoutingModule,
+   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

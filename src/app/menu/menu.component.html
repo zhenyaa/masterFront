@@ -9,10 +9,16 @@
         [fixedBottomGap]="56">
                  <!-- [fixedInViewport]="mobileQuery.matches" fixedTopGap="56"> -->
       <mat-nav-list>
-        <mat-list-item> <a mat-button routerLink="/dashboard">Записи</a> </mat-list-item>
-        <mat-list-item> <a mat-button routerLink="/settings">Добавить</a> </mat-list-item>
-        <mat-list-item> <a mat-button routerLink="/contact">Услуги</a> </mat-list-item>
-        <mat-list-item> <a mat-button routerLink="/contact">Услуги</a> </mat-list-item>
+        <h3 mat-subheader>Записи</h3>
+        <mat-list-item> <a mat-button routerLink="/showrecord/add">Записи</a> </mat-list-item>
+        <mat-list-item> <a mat-button routerLink="/showrecord/show">Добавить</a> </mat-list-item>
+        <mat-divider></mat-divider>
+        <h3 mat-subheader>Услуги</h3>
+        <mat-list-item> <a mat-button routerLink="/contact">Список</a> </mat-list-item>
+        <mat-list-item> <a mat-button routerLink="/contact">Добавить</a> </mat-list-item>
+        <mat-divider></mat-divider>
+        <h3 mat-subheader>Дургое</h3>
+        <mat-list-item> <a mat-button routerLink="/contact">Настройки</a> </mat-list-item>
         <!-- <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a> -->
       </mat-nav-list>
       <!-- <a mat-button routerLink="/dashboard">Dashboard</a> -->
@@ -22,7 +28,7 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-    <p>test content!!</p>
+    <router-outlet></router-outlet>
       <!-- <p *ngFor="let content of fillerContent">{{content}}</p> -->
     </mat-sidenav-content>
   </mat-sidenav-container>
